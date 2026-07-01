@@ -1,4 +1,11 @@
 export const Cookie = {
+    /**
+     * Gets a cookie value by name. Automatically parses JSON values if detected.
+     * @param {string} cookieName - The cookie name
+     * @returns {string|any} The cookie value (string, parsed JSON, or empty string if not found)
+     * @example
+     * Cookie.get('settings'); // returns {theme: 'dark'} if JSON
+     */
     get: (cookieName) => {
         if ( !cookieName || typeof cookieName !== 'string' || cookieName.trim() === '' ) {
             return '';
@@ -36,10 +43,14 @@ export const Cookie = {
     },
 
     /**
+     * Sets a cookie with the specified name and value. Objects are automatically JSON stringified.
      * @param {string} cookieName - The cookie name
      * @param {string|object} value - The cookie value
      * @param {string} [expires=''] - Expiration date in UTC string format (e.g. new Date().toUTCString())
      * @param {string} [path='/'] - The cookie path
+     * @returns {void}
+     * @example
+     * Cookie.set('settings', {theme: 'dark'}, new Date(Date.now() + 86400000).toUTCString());
      */
     set: (cookieName, value, expires = '', path = '/') => {
         if ( !cookieName || typeof cookieName !== 'string' || cookieName.trim() === '' ) {
@@ -60,6 +71,14 @@ export const Cookie = {
         document.cookie = cookieString;
     },
 
+    /**
+     * Deletes a cookie by name by setting its expiration to the past.
+     * @param {string} cookieName - The cookie name
+     * @param {string} [path] - The cookie path (must match the path used when setting)
+     * @returns {void}
+     * @example
+     * Cookie.delete('settings', '/app');
+     */
     delete: (cookieName, path) => {
         if ( !cookieName || typeof cookieName !== 'string' || cookieName.trim() === '' ) {
             console.warn('Cookie: cookieName is required and must be a non-empty string');

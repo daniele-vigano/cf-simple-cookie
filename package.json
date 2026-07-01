@@ -1,24 +1,17 @@
 {
-  "name": "cf-simple-cookie",
-  "version": "1.2.9",
+  "author": "Daniele Viganò",
+  "description": "A vanilla JS lightweight (zero dependencies) library to read, write and delete cookies in the browser.",
+  "devDependencies": {
+    "microbundle": "^0.15.1"
+  },
+  "exports": {
+    "default": "./dist/index.js",
+    "require": "./dist/index.cjs"
+  },
   "files": [
     "dist"
   ],
-  "description": "A vanilla JS lightweight (zero dependencies) library to read, write and delete cookies in the browser.",
   "homepage": "https://github.com/daniele-vigano/cf-simple-cookie",
-  "type": "module",
-  "source": "src/index.js",
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.module.js",
-  "unpkg": "./dist/index.umd.js",
-  "exports": {
-    "require": "./dist/index.cjs",
-    "default": "./dist/index.js"
-  },
-  "scripts": {
-    "build": "microbundle",
-    "dev": "microbundle watch --no-compress --format modern"
-  },
   "keywords": [
     "javascript cookie",
     "browser cookie management",
@@ -34,13 +27,22 @@
     "get cookie javascript",
     "delete cookie javascript"
   ],
-  "author": "Daniele Viganò",
   "license": "MIT",
-  "devDependencies": {
-    "microbundle": "^0.15.1"
-  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.module.js",
+  "name": "cf-simple-cookie",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/daniele-vigano/cf-simple-cookie.git"
-  }
+  },
+  "scripts": {
+    "build": "microbundle",
+    "dev": "microbundle watch --no-compress --format modern",
+    "prepublishOnly": "npm run build"
+  },
+  "source": "src/index.js",
+  "type": "module",
+  "types": "./dist/index.d.ts",
+  "unpkg": "./dist/index.umd.js",
+  "version": "1.2.9"
 }
