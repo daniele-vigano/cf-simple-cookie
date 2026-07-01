@@ -45,7 +45,7 @@ export const Cookie = {
     /**
      * Sets a cookie with the specified name and value. Objects are automatically JSON stringified.
      * @param {string} cookieName - The cookie name
-     * @param {string|object} value - The cookie value
+     * @param {string|Object} value - The cookie value
      * @param {string} [expires=''] - Expiration date in UTC string format (e.g. new Date().toUTCString())
      * @param {string} [path='/'] - The cookie path
      * @returns {void}
