@@ -4,7 +4,9 @@
 [![npm downloads](https://img.shields.io/npm/dm/cf-simple-cookie.svg)](https://www.npmjs.com/package/cf-simple-cookie)
 [![license](https://img.shields.io/npm/l/cf-simple-cookie.svg)](https://github.com/daniele-vigano/cf-simple-cookie/blob/main/LICENSE)
 
-A **vanilla JavaScript** lightweight cookie management library with **zero dependencies** for reading, writing, and deleting browser cookies. Perfect for modern web applications that need simple, efficient cookie handling without external dependencies.
+A **vanilla JavaScript** lightweight cookie management library with **zero dependencies** for reading, writing, and
+deleting browser cookies. Perfect for modern web applications that need simple, efficient cookie handling without
+external dependencies.
 
 ## Features
 
@@ -37,8 +39,9 @@ pnpm add cf-simple-cookie
 Or use it directly in the browser via CDN:
 
 ```html
+
 <script type="module">
-  import Cookie from 'https://unpkg.com/cf-simple-cookie';
+    import Cookie from 'https://unpkg.com/cf-simple-cookie';
 </script>
 ```
 
@@ -92,12 +95,12 @@ Cookie.set('preference', 'value', expires, '/admin');
 ```javascript
 // Store complex objects - automatically serialized to JSON
 const userData = {
-  name: 'Charlie',
-  city: 'New York',
-  preferences: {
-    theme: 'dark',
-    language: 'en'
-  }
+    name: 'Charlie',
+    city: 'New York',
+    preferences: {
+        theme: 'dark',
+        language: 'en'
+    }
 };
 
 const expires = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toUTCString();
@@ -162,7 +165,8 @@ Retrieves a cookie value from the browser.
 |--------------|----------|------------------------------------|
 | `cookieName` | `string` | The name of the cookie to retrieve |
 
-**Returns:** `string | object | ''` - The cookie value (automatically parsed from JSON if applicable), or empty string if not found
+**Returns:** `string | object | ''` - The cookie value (automatically parsed from JSON if applicable), or empty string
+if not found
 
 **Example:**
 
@@ -198,9 +202,3 @@ MIT
 - [GitHub Repository](https://github.com/daniele-vigano/cf-simple-cookie)
 - [npm Package](https://www.npmjs.com/package/cf-simple-cookie)
 - [Report Issues](https://github.com/daniele-vigano/cf-simple-cookie/issues)
-
----
-
-## Keywords
-
-`javascript cookie`, `browser cookie management`, `vanilla js cookie`, `cookie library`, `javascript cookie parser`, `cookie helper`, `lightweight cookie`, `zero dependencies`, `es6 cookie`, `cookie storage`, `browser storage`, `web storage`, `cookie manipulation`, `set cookie javascript`, `get cookie javascript`, `delete cookie javascript`

@@ -20,14 +20,19 @@
     "dev": "microbundle watch --no-compress --format modern"
   },
   "keywords": [
-    "cookie",
-    "browser",
-    "read",
-    "write",
-    "delete",
-    "simple cookie",
-    "javascript",
-    "vanilla"
+    "javascript cookie",
+    "browser cookie management",
+    "vanilla js cookie",
+    "cookie library",
+    "javascript cookie parser",
+    "cookie helper",
+    "lightweight cookie",
+    "zero dependencies",
+    "es6 cookie",
+    "cookie manipulation",
+    "set cookie javascript",
+    "get cookie javascript",
+    "delete cookie javascript"
   ],
   "author": "Daniele Viganò",
   "license": "MIT",
