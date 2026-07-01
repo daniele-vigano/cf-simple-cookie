@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example</title>
+
+    <script type="module">
+        import Cookie from '../dist/index.js';
+
+        const cookieName = 'test_1';
+        const cookieValue = {
+            name: 'Charlie',
+            city: 'New York'
+        };
+
+        Cookie.delete(cookieName);
+
+        Cookie.set(cookieName, cookieValue, new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toUTCString(), '/');
+
+        const retrivedValue = Cookie.get(cookieName);
+
+        console.log(retrivedValue);
+    </script>
+</head>
+<body>
+<p>Example page: open Browser Console.</p>
+</body>
+</html>
