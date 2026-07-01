@@ -44,5 +44,5 @@
   "type": "module",
   "types": "./dist/index.d.ts",
   "unpkg": "./dist/index.umd.js",
-  "version": "1.2.9"
+  "version": "1.2.10"
 }
